@@ -8,7 +8,11 @@
 <a href="https://packagist.org/packages/arubacao/asset-cdn"><img src="https://img.shields.io/packagist/dt/arubacao/asset-cdn.svg?style=flat-square" alt="Total Downloads"></a>
 </p>
 
-<p align="center"><strong>
+<h3 align="center" style="color:#CC0000">
+This package is forked originally from arubacao/asset-cdn.
+</h3>
+<p align="center">
+<strong>
 Serve Laravel Assets from a Content Delivery Network (CDN)
 </strong></p>
 
@@ -38,7 +42,7 @@ $ php artisan asset-cdn:sync
 Install this package via composer:
 
 ```bash
-$ composer require arubacao/asset-cdn
+$ composer require faguvenli/asset-cdn
 ```
 
 Also register the service provider:  
@@ -53,7 +57,7 @@ _Only required for Laravel `<=5.4`, for Laravel `>=5.5` [auto-discovery](compose
 ```
 Notes:  
 
- - `arubacao/asset-cdn` is functional and fully tested for Laravel `5.4` - `8.*` on PHP `7.0`, `7.1`, `7.2`, `7.3, 7.4`
+ - `arubacao/asset-cdn` is functional and fully tested for Laravel `5.4` - `8.*` on PHP `7.0`, `7.1`, `7.2`, `7.3, 7.4, 8.0`
 
 ## Configuration
 
