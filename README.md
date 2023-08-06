@@ -17,7 +17,7 @@ Serve Laravel Assets from a Content Delivery Network (CDN)
 </strong></p>
 
 ## Introduction
-Updated for Laravel 9
+Updated for Laravel 10
 
 This package lets you **push**, **sync**, **delete** and **serve** assets to/from a CDN of your choice e.g. AWS Cloudfront.  
 It adds helper methods **`mix_cdn()`** and **`asset_cdn()`**.
