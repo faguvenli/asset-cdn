@@ -2,9 +2,11 @@
 
 namespace Arubacao\AssetCdn\Test\Finder;
 
+use PHPUnit\Framework\Attributes\Test;
+
 class PatternFinderTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function find_patterns()
     {
         $fileConfig = [
@@ -34,7 +36,7 @@ class PatternFinderTest extends TestCase
         $this->assertFilesMatchConfig($expectedFiles, $fileConfig);
     }
 
-    /** @test */
+    #[Test]
     public function find_patterns_and_exclude_some()
     {
         $fileConfig = [

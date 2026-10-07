@@ -3,6 +3,7 @@
 namespace Arubacao\AssetCdn\Test\Finder;
 
 use Arubacao\AssetCdn\Finder;
+use Illuminate\Testing\Assert;
 
 class TestCase extends \Arubacao\AssetCdn\Test\TestCase
 {
@@ -28,7 +29,7 @@ class TestCase extends \Arubacao\AssetCdn\Test\TestCase
 
 //        dd($actualFiles);
 
-        $this->assertArraySubset($expectedFiles, $actualFiles);
+        Assert::assertArraySubset($expectedFiles, $actualFiles);
         $this->assertCount(count($expectedFiles), $actualFiles);
     }
 }

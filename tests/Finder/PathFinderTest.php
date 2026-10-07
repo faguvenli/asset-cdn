@@ -2,9 +2,11 @@
 
 namespace Arubacao\AssetCdn\Test\Finder;
 
+use PHPUnit\Framework\Attributes\Test;
+
 class PathFinderTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function find_all_js_paths()
     {
         $fileConfigs = [
@@ -43,7 +45,7 @@ class PathFinderTest extends TestCase
         }
     }
 
-    /** @test */
+    #[Test]
     public function find_all_js_paths_exclude_one()
     {
         $fileConfigs = [
@@ -107,7 +109,7 @@ class PathFinderTest extends TestCase
         }
     }
 
-    /** @test */
+    #[Test]
     public function find_sub_path()
     {
         $fileConfigs = [
@@ -144,7 +146,7 @@ class PathFinderTest extends TestCase
         }
     }
 
-    /** @test */
+    #[Test]
     public function find_multiple_paths()
     {
         $fileConfigs = [
@@ -185,7 +187,7 @@ class PathFinderTest extends TestCase
         }
     }
 
-    /** @test */
+    #[Test]
     public function find_multiple_paths_exclude_one()
     {
         $fileConfigs = [
@@ -256,7 +258,7 @@ class PathFinderTest extends TestCase
         }
     }
 
-    /** @test */
+    #[Test]
     public function find_no_paths()
     {
         $fileConfig = [

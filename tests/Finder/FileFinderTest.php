@@ -2,9 +2,11 @@
 
 namespace Arubacao\AssetCdn\Test\Finder;
 
+use PHPUnit\Framework\Attributes\Test;
+
 class FileFinderTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function find_three_files()
     {
         $fileConfigs = [
@@ -39,7 +41,7 @@ class FileFinderTest extends TestCase
         }
     }
 
-    /** @test */
+    #[Test]
     public function find_all_fontawesomeotf()
     {
         $fileConfigs = [
@@ -70,7 +72,7 @@ class FileFinderTest extends TestCase
         }
     }
 
-    /** @test */
+    #[Test]
     public function find_all_fontawesomeotf_exclude_one()
     {
         $fileConfigs = [

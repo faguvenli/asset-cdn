@@ -3,10 +3,11 @@
 namespace Arubacao\AssetCdn\Test\Commands;
 
 use Illuminate\Support\Facades\Artisan;
+use PHPUnit\Framework\Attributes\Test;
 
 class EmptyCommandTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function command_deletes_all_files_on_cdn()
     {
         $this->seedCdnFilesystem([

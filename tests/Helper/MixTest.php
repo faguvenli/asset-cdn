@@ -3,10 +3,11 @@
 namespace Arubacao\AssetCdn\Test\Helper;
 
 use Arubacao\AssetCdn\Test\TestCase;
+use PHPUnit\Framework\Attributes\Test;
 
 class MixTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function mix_cdn_falls_back_to_mix_if_disabled()
     {
         $this->app['config']->set('asset-cdn.use_cdn', false);
@@ -20,7 +21,7 @@ class MixTest extends TestCase
         }
     }
 
-    /** @test */
+    #[Test]
     public function mix_cdn_returns_correct_url()
     {
         $urls = [
@@ -33,7 +34,7 @@ class MixTest extends TestCase
         }
     }
 
-    /** @test */
+    #[Test]
     public function mix_cdn_throws_exception_with_unknown_file()
     {
         $this->expectException(\Exception::class);
@@ -41,12 +42,10 @@ class MixTest extends TestCase
         mix_cdn('js/unknown.app.js');
     }
 
-    /** @test */
+    #[Test]
     public function mix_cdn_throws_exception_with_no_manifest_file()
     {
-        $this->app->bind('path.public', function () {
-            return __DIR__.'/../testfiles/dummy';
-        });
+        $this->app->usePublicPath(__DIR__.'/../testfiles/dummy');
 
         $this->expectException(\Exception::class);
         $this->expectExceptionMessage('The Mix manifest does not exist.');

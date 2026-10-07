@@ -4,10 +4,12 @@ namespace Arubacao\AssetCdn\Test\Commands;
 
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Testing\Assert;
+use PHPUnit\Framework\Attributes\Test;
 
 class PushCommandTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function command_pushes_all_js_paths_to_cdn()
     {
         $this->setFilesInConfig([
@@ -30,7 +32,7 @@ class PushCommandTest extends TestCase
         $this->assertFilesExistOnCdnFilesystem($expectedFiles);
     }
 
-    /** @test */
+    #[Test]
     public function command_receives_options()
     {
         $this->setFilesInConfig([
@@ -56,7 +58,7 @@ class PushCommandTest extends TestCase
                     string $name,
                     array $options
                 ) use ($expectedOptions) {
-                    $this->assertArraySubset($expectedOptions, $options);
+                    Assert::assertArraySubset($expectedOptions, $options);
 
                     return true;
                 }

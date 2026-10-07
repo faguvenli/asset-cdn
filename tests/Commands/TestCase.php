@@ -4,6 +4,7 @@ namespace Arubacao\AssetCdn\Test\Commands;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Testing\Assert;
 
 class TestCase extends \Arubacao\AssetCdn\Test\TestCase
 {
@@ -29,7 +30,7 @@ class TestCase extends \Arubacao\AssetCdn\Test\TestCase
         $actualFiles = array_values($actualFiles);
         $expectedFiles = array_values($expectedFiles);
 
-        $this->assertArraySubset($expectedFiles, $actualFiles);
+        Assert::assertArraySubset($expectedFiles, $actualFiles);
         $this->assertCount(count($expectedFiles), $actualFiles);
     }
 
